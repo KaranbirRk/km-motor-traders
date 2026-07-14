@@ -1,0 +1,84 @@
+@import "tailwindcss";
+
+@theme {
+  --color-surface: #f4f3ee;
+  --color-surface-2: #eae8e1;
+  --color-ink: #111111;
+  --color-ink-muted: #5a5a5a;
+  --color-brand: #c9a227;
+  --color-brand-hover: #a88b1c;
+  --color-border: #ddd9cf;
+  --font-display: "Oswald", ui-sans-serif, system-ui, sans-serif;
+  --font-body: "Figtree", ui-sans-serif, system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: var(--color-surface);
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-ink);
+  overflow-x: hidden;
+  background-color: var(--color-surface);
+}
+
+::selection {
+  background-color: var(--color-brand);
+  color: #fff;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-surface);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-brand);
+  border-radius: 2px;
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+.stagger-1 {
+  transition-delay: 0.08s;
+}
+.stagger-2 {
+  transition-delay: 0.16s;
+}
+.stagger-3 {
+  transition-delay: 0.24s;
+}
+
+.input-km {
+  width: 100%;
+  background: #fff;
+  border: 1px solid var(--color-border);
+  padding: 0.875rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-ink);
+  outline: none;
+  border-radius: 2px;
+  transition: border-color 0.2s;
+}
+.input-km:focus {
+  border-color: var(--color-brand);
+}
+.input-km::placeholder {
+  color: #9a968c;
+}
