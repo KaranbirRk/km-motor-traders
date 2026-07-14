@@ -79,15 +79,15 @@ const HomePageClient: React.FC<Props> = ({ featuredCars }) => {
           </div>
         </div>
 
-        <div className="lg:col-span-7 relative order-1 lg:order-2 bg-surface">
-          <div className="relative w-full aspect-[4/3] lg:min-h-full lg:h-full lg:aspect-auto bg-surface">
+        <div className="lg:col-span-7 relative order-1 lg:order-2 overflow-hidden bg-[#F4F3EE]">
+          <div className="relative w-full aspect-[4/3] lg:min-h-full lg:h-full lg:absolute lg:inset-0 bg-[#F4F3EE]">
             <img
               src="/hero.png"
               alt="KM Motor Traders dealership in Dandenong"
-              className="absolute inset-0 w-full h-full object-cover object-center lg:object-contain lg:object-center bg-surface"
+              className="absolute inset-0 h-full w-full object-cover object-center"
             />
             <div
-              className="pointer-events-none absolute inset-y-0 left-0 hidden lg:block w-12 bg-gradient-to-r from-surface to-transparent"
+              className="pointer-events-none absolute inset-y-0 left-0 hidden lg:block w-12 bg-gradient-to-r from-[#F4F3EE] to-transparent"
               aria-hidden
             />
           </div>
